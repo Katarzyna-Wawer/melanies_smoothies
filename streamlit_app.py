@@ -17,7 +17,7 @@ session = cnx.session()
 # Fetch the fruit options from the database
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 st.dataframe(data=my_dataframe, use_container_width = True)
-st.stop()
+#st.stop()
 fruit_options = [row['FRUIT_NAME'] for row in my_dataframe]
 
 
